@@ -1,0 +1,22 @@
+.friendImg {
+    margin: 0 auto 10px;
+}
+
+.friendName {
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.online {
+    font-size: 18px;
+    text-align: center;
+    color: #259025;
+}
+
+.offline {
+    font-size: 18px;
+    text-align: center;
+    color: #ff0b0a;
+}

@@ -1,0 +1,27 @@
+.table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1px solid black;
+    font-size: 18px;
+}
+
+.tableHead {
+    background-color: #2a2a2a;
+    color: white;
+}
+
+.tableHeading {
+    width: 200px;
+    padding: 6px 12px;
+    border: 1px solid black;
+}
+
+.tableRow:nth-child(even) {
+    background-color: lightgray;
+}
+
+.tableCell {
+    padding: 5px 10px;
+    text-align: center;
+    border: 1px solid black;
+}
