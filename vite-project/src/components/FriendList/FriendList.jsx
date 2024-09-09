@@ -1,16 +1,21 @@
-import css from "./FriendList.module.css";
-import FriendListItem from "../FriendListItem/FriendListItem.jsx";
+import React from "react";
+import styles from "./friendList.module.css";
+import FriendListItem from "../FriendListItem/friendListItem";
 
-function FriendList({ friends }) {
+const FriendList = ({ friends }) => {
   return (
-    <ul className={css.friendsList}>{
-      friends.map(friend =>
-        <li className={css.friendCard} key={friend.id}>
-          <FriendListItem friend={friend} />
+    <ul className={styles.friendList}>
+      {friends.map((friend) => (
+        <li key={friend.id}>
+          <FriendListItem
+            avatar={friend.avatar}
+            name={friend.name}
+            isOnline={friend.isOnline}
+          />
         </li>
-      )}
+      ))}
     </ul>
-  )
-}
+  );
+};
 
 export default FriendList;

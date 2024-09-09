@@ -1,31 +1,34 @@
-import css from "./Profile.module.css";
+import React from "react";
+import styles from "./profile.module.css";
 
-function Profile({ name, tag, location, image, stats }) {
+const Profile = ({ name, tag, location, image, stats }) => {
+  const { followers, views, likes } = stats;
+
   return (
-    <div className={css.profileCard}>
-      <div className={css.profileDescription}>
-        <img className={css.profileImg} src={image} alt={name} />
-        <p className={css.profileName}>{name}</p>
-        <p className={css.profileTag}>{tag}</p>
-        <p className={css.profileLocation}>{location}</p>
+    <div className={styles.profile}>
+      <div className={styles.profile__wrapper}>
+        <img src={image} alt="User avatar" className={styles.profile__avatar} />
+        <p className={styles.profile__name}>{name}</p>
+        <p className={styles.profile__tag}>@{tag}</p>
+        <p className={styles.profile__location}>{location}</p>
       </div>
 
-      <ul className={css.profileStats}>
-        <li className={css.profileStat}>
-          <span className={css.statTitle}>Followers</span>
-          <span className={css.statText}>{stats.followers}</span>
+      <ul className={styles.profile__stats}>
+        <li>
+          <span className={styles.profile__label}>Followers</span>
+          <span className={styles.profile__quantity}>{followers}</span>
         </li>
-        <li className={css.profileStat}>
-          <span className={css.statTitle}>Views</span>
-          <span className={css.statText}>{stats.views}</span>
+        <li>
+          <span className={styles.profile__label}>Views</span>
+          <span className={styles.profile__quantity}>{views}</span>
         </li>
-        <li className={css.profileStat}>
-          <span className={css.statTitle}>Likes</span>
-          <span className={css.statText}>{stats.likes}</span>
+        <li>
+          <span className={styles.profile__label}>Likes</span>
+          <span className={styles.profile__quantity}>{likes}</span>
         </li>
       </ul>
     </div>
-  )
-}
+  );
+};
 
 export default Profile;

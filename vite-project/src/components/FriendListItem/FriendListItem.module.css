@@ -1,22 +1,25 @@
-.friendImg {
-    margin: 0 auto 10px;
+.friendList {
+    display: flex;
+    margin-top: 60px;
+    gap: 20px;
+    justify-content: center;
 }
 
-.friendName {
-    font-size: 22px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 5px;
+.friend {
+    border: 2px solid black;
+    padding: 16px;
 }
 
-.online {
-    font-size: 18px;
-    text-align: center;
-    color: #259025;
+.friend__name {
+    font-weight: 500;
 }
 
-.offline {
-    font-size: 18px;
-    text-align: center;
-    color: #ff0b0a;
+.friend__status.online {
+    color: green;
+    font-weight: 600;
+}
+
+.friend__status.offline {
+    color: red;
+    font-weight: 600;
 }

@@ -1,13 +1,25 @@
-import css from "./FriendListItem.module.css";
+import React from "react";
+import styles from "./friendListItem.module.css";
 
-function FriendListItem({ friend }) {
+const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
-    <div>
-      <img className={css.friendImg} src={friend.avatar} alt={friend.name} width="48" />
-      <p className={css.friendName}>{friend.name}</p>
-      {friend.isOnline ? (<p className={css.online}>Online</p>) : (<p className={css.offline}>Offline</p>)}
+    <div className={styles.friend}>
+      <img
+        src={avatar}
+        alt={`Avatar of ${name}`}
+        width="48"
+        className={styles.friend__avatar}
+      />
+      <p className={styles.friend__name}>{name}</p>
+      <p
+        className={`${styles.friend__status} ${
+          isOnline ? styles.online : styles.offline
+        }`}
+      >
+        {isOnline ? "Online" : "Offline"}
+      </p>
     </div>
-  )
-}
+  );
+};
 
 export default FriendListItem;
