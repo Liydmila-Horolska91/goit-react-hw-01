@@ -1,5 +1,4 @@
-import React from "react";
-import styles from "./transaction.module.css";
+import styles from "./Transaction.module.css";
 
 const Transaction = ({ type, amount, currency, isEven }) => {
   return (
