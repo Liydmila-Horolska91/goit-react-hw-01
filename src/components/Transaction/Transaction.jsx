@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styles from "./Transaction.module.css";
 
 const Transaction = ({ type, amount, currency, isEven }) => {
@@ -8,6 +9,13 @@ const Transaction = ({ type, amount, currency, isEven }) => {
       <td>{currency}</td>
     </tr>
   );
+};
+
+Transaction.propTypes = {
+  type: PropTypes.string.isRequired,
+  amount: PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
+  isEven: PropTypes.bool,
 };
 
 export default Transaction;

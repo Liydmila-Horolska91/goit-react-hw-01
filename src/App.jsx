@@ -1,12 +1,9 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import userData from "./Data/userData.json";
-import Profile from "./components/Profile/profile.jsx";
+import Profile from "./components/Profile/Profile.jsx";
 import FriendList from "./components/FriendList/FriendList.jsx";
 import friends from "./Data/friends.json";
-import TransactionHistory from "./components/TransactionHistory/transactionHistory.jsx";
+import TransactionHistory from "./components/TransactionHistory/TransactionHistory.jsx";
 import transactions from "./Data/transactions.json";
 
 const App = () => {
@@ -20,20 +17,9 @@ const App = () => {
         stats={userData.stats}
       />
       <FriendList friends={friends} />
-      <TransactionHistory items={transactions} />
+      <TransactionHistory items ={transactions} />
     </div>
   );
 };
 
 export default App;
-
-// import FriendList from "./components/friendList";
-// import friends from "./friends.json";
-
-// const App = () => {
-//   return (
-//     <div className="app">
-//       <FriendList friends={friends} />
-//     </div>
-//   );
-// };
